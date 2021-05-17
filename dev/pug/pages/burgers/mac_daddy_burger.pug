@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Mac Daddy Burger"
+    - descripcion = "Hamburguesa servida entre 2 capas fritas de Mac & Cheese, lechuga morada, cebolla y tomate. ¡una verdadera explosión de sabor!"
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +plate('media/hamburguesas/MAC_DADDY_BURGER.jpg',page,'(160 g) Bs 76','(250 g) Bs 94',descripcion,sponsors[1])
+    include ../../blocks/btn_atras
+    +btn("hamburguesas")

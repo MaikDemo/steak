@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Pique Macho"
+    - descripcion = "Plato tradicional boliviano con un toque de “The Steakhouse”."
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +platedos('media/plato_principal/PIQUE_MACHO.jpg',page,'1 a 2 personas Bs 98','3 a 4 personas Bs 168',descripcion,sponsors[5])
+    include ../../blocks/btn_atras
+    +btn("plato_principal")

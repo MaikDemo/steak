@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Tortilla Española"
+    - descripcion = ""
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +plate('media/tapas_entradas/TORTILLA_ESPANOLA.jpg',page,'Bs 28','',descripcion,sponsors[5])
+    include ../../blocks/btn_atras
+    +btn("tapas_entradas")

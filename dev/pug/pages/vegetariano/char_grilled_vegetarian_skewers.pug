@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Char-Grilled Vegetarian skewers"
+    - descripcion = "Brocheta de verduras preparadas a la parrilla."
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +plate('media/vegetariano/CHAR_GRILLED_VEGETARIAN_SKEWERS.jpg',page,'Bs 52','',descripcion,sponsors[0])
+    include ../../blocks/btn_atras
+    +btn("vegetariano")

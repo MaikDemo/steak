@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Kids Chicken Wings"
+    - descripcion = "Alitas de pollo a la parrilla con papas fritas y un helado."
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +plate('media/menu_infantil/ALITAS_DE_POLLO.jpg',page,'Bs 39','',descripcion,sponsors[5])
+    include ../../blocks/btn_atras
+    +btn("menu_infantil")

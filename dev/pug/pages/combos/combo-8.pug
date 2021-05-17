@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Combo 8 - Pique macho &quot;The Steakhouse&quot; + Huari de 330 ml<br>Bs 99"
+    - descripcion = ""
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +plate('media/combos/COMBO_8.jpg',page,'','',descripcion,sponsors[5])
+    include ../../blocks/btn_atras
+    +btn("combos")

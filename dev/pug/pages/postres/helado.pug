@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Helado"
+    - descripcion = "3 bolitas de helado; vainilla, chocolate y frutilla."
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +plate('media/postres/HELADO_TRICOLOR_REST.jpg',page,'Bs 20','',descripcion,sponsors[3])
+    include ../../blocks/btn_atras
+    +btn("postres")

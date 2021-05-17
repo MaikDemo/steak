@@ -1,0 +1,17 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+//- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+block append config
+    - page = "SteakHouse Burger"
+    - descripcion = "Pide algo diferente…!!! Hamburguesa con langostinos, queso, tocino, lechuga, cebolla, tomate, salsa Jack Daniel's y salsa de ajo."
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +plate('media/hamburguesas/STEAKHOUSE_BURGER.jpg',page,'(160 g) Bs 78','(250 g) Bs 94',descripcion,sponsors[1])
+    include ../../blocks/btn_atras
+    +btn("hamburguesas")
+    
+
+
+    

@@ -1,0 +1,37 @@
+mixin plate(img,title,price,pricetwo,ingredients,sponsor)
+    .plate
+        .plate__img
+            .plate__logo
+                img(src="media/steakhouse.png", alt="Logo SteakHouse")
+            picture.plate__cont__picture
+                img.plate__picture(srcset=img, alt=title)
+        .container
+            .plate__body
+                h2.plate__title!= title
+                p.plate__price #{price}
+                p.plate__price #{pricetwo}
+                p.plate__text !{ingredients}
+            .sponsors
+                .sponsors__body
+                    include sponsor
+                    +sponsor(sponsor)
+            
+mixin platedos(img,title,price,pricetwo,ingredients,sponsor)
+    .plate
+        .plate__img
+            .plate__logo
+                img(src="media/steakhouse.png", alt="Logo SteakHouse")
+            picture.plate__cont__picture
+                img.plate__picture(srcset=img, alt=title)
+        .container
+            .plate__body
+                h2.plate__title!= title
+                p.plate__price #{price}
+                p.plate__price #{pricetwo}
+                p.plate__text !{ingredients}
+                p.plate__legend ** Todos nuestros platos se sirven con ensalada y guarnición.
+            .sponsors
+                .sponsors__body
+                    include sponsor
+                    +sponsor(sponsor)
+            

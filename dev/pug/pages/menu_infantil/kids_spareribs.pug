@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Kids Spareribs"
+    - descripcion = "Nuestras famosas costillas de cerdo servidas con papas fritas y una porción helado."
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +plate('media/menu_infantil/KIDS_SPARERIBS.jpg',page,'Bs 49','',descripcion,sponsors[4])
+    include ../../blocks/btn_atras
+    +btn("menu_infantil")

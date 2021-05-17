@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Ensalada César"
+    - descripcion = "Ensalada fresca de origen Italiano a base de lechuga, huevo duro, queso parmesano, tomates cherrys, incorporado con pequeños filetes de pollo a la plancha bien sazonados y nuestra salsa César hecha en Casa a base de aceite de oliva aromatizado, con una base de mayonesa, parmesano, ajo y limón."
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +plate('media/vegetariano/ENSALADA_CESAR.jpg',page,'Bs 42','',descripcion,sponsors[1])
+    include ../../blocks/btn_atras
+    +btn("vegetariano")

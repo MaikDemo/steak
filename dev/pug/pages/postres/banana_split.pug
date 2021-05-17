@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Banana Split"
+    - descripcion = "Banana con helado de vainilla y chocolate servido con crema."
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +plate('media/postres/BANANA_SPLIT.jpg',page,'Bs 24','',descripcion,sponsors[0])
+    include ../../blocks/btn_atras
+    +btn("postres")

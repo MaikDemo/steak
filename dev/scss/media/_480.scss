@@ -1,0 +1,102 @@
+@media screen and(max-width:480px) {
+  body {
+    font-size: 16px;
+  }
+  .container {
+    width: 90%;
+  }
+  .headerdishes {
+    margin-bottom: 15px;
+  }
+  .dishes {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 12px;
+    font-size: 14px;
+    &__text {
+      text-align: center;
+      line-height: 0.92em;
+    }
+    &__name {
+    }
+  }
+  .plate {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    &__img {
+      width: 100%;
+    }
+    &__body {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    &__logo {
+      right: 10px;
+      width: 140px;
+    }
+    &__title {
+      font-size: 2em;
+      line-height: 1.1em;
+      margin-bottom: 14px;
+    }
+    &__price {
+      font-size: 1.4em;
+    }
+    &__text {
+      font-size: 1.3em;
+      margin-top: 14px;
+    }
+  }
+  .header {
+    &__logo {
+      width: 200px;
+    }
+    margin-bottom: 75px;
+  }
+  .menu {
+    &__nav {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 15px;
+      grid-column-gap: 23px;
+    }
+    &__item {
+      width: 140px;
+      font-size: 1em;
+    }
+  }
+  .btn {
+    width: 80px;
+  }
+  .sponsors {
+    &__body {
+      flex-direction: column;
+    }
+    &__content {
+      width: 50px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+  .lists {
+    font-size: 0.9em;
+    &__content {
+      width: 85%;
+      margin: 0 auto;
+    }
+    &__title{
+      font-size: 1.1em;
+    }
+  }
+  .chops {
+    &__prices {
+      grid-template-columns: repeat(4, 50px);
+    }
+    &__price {
+      width: 50px;
+    }
+    &__name {
+      width: 50px;
+    }
+  }
+}

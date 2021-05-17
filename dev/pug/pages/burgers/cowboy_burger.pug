@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Cowboy Burger"
+    - descripcion = "Hamburguesa estilo &quot;cowboy americano&quot;, con cebolla, tomate, queso, tocino y salsa JACK DANIEL'S."
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +plate('media/hamburguesas/COWBOY_BURGER.jpg',page,'(160 g) Bs 66','(250 g) Bs 84',descripcion,sponsors[5])
+    include ../../blocks/btn_atras
+    +btn("hamburguesas")

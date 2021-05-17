@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        block config
+            include ../config/config
+        include ../includes/head
+    body
+        block header
+            include ../includes/header-dishes
+        block content
+        block preloading
+            include ../includes/preloading
+        block btnAtras
+            include ../blocks/btn_atras
+            +btn("index")
+        block scripts
+            script(src="app.js")
+    
+        

@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Fish en Papillote"
+    - descripcion = "Pescado cocinado en papel aluminio con vino blanco, limón y finas hierbas."
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +platedos('media/plato_principal/FISH_EN_PAPILLOTE.jpg',page,'Bs 116','',descripcion,sponsors[2])
+    include ../../blocks/btn_atras
+    +btn("plato_principal")

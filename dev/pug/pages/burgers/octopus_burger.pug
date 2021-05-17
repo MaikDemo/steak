@@ -1,0 +1,17 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+//- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+block append config
+    - page = "Octopus Burger"
+    - descripcion = "Hamburguesa con queso, tocino, lechuga, tomate, cebolla, palta cubierta de salsa bistro y pulpo a la parrilla servido en un pan rojizo a base de vino."
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +plate('media/hamburguesas/OCTOPUS_BURGER.jpg',page,'(160 g) Bs 78','(250 g) Bs 96',descripcion,sponsors[3])
+    include ../../blocks/btn_atras
+    +btn("hamburguesas")
+    
+
+
+    

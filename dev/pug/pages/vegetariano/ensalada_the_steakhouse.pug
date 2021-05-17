@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Ensalada The Steakhouse"
+    - descripcion = "Nuestra ensalada de la Casa preparada con mix de lechugas, pepino, tomates cherrys, huevo duro, cebolla, choclitos, cubierta con aceite de oliva y nuestra vinagreta aromatizada a base de romero, tomillo, finas hierbas, coronada con salsa tartara."
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +plate('media/vegetariano/ENSALADA_THE_STEAKHOUSE.jpg',page,'Bs 42','',descripcion,sponsors[2])
+    include ../../blocks/btn_atras
+    +btn("vegetariano")

@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Oversized Jack Daniel's Steak"
+    - descripcion = "1200 g de la más deliciosa carne de res, flambeada con whisky Jack Daniel’s; servido con salsa Jack Daniel’s. ¡Acábalo y llévate una polera!"
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +platedos('media/plato_principal/OVERSIZED_JACK_DANIELS_STEAK.jpg',page,' (1200 g) Bs 248','',descripcion,sponsors[3])
+    include ../../blocks/btn_atras
+    +btn("plato_principal")

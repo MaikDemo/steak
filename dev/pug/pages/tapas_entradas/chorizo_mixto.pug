@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Chorizo Mixto"
+    - descripcion = "4 morcillas y 4 chorizos de la Casa."
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +plate('media/tapas_entradas/CHORIZO_MIXTO.jpg',page,'Bs 79','',descripcion,sponsors[5])
+    include ../../blocks/btn_atras
+    +btn("tapas_entradas")

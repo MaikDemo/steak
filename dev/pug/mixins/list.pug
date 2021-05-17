@@ -1,0 +1,31 @@
+//- Titulo de Lista
+mixin header(title)
+    .lists__header
+        img.lists__marco(src="media/marco_title.svg", alt="Marco")
+        h3.lists__title #{title}
+
+mixin body(items)
+    .lists__body
+        each item in items
+            .lists__item
+                p.lists__name #{item.name}
+                p.lists__price #{item.price}
+                if(item.price_dos)
+                    p.lists__price--right #{item.price_dos}
+- var names = ["","Vaso","500ml", "Lt.","Pitcher"]
+mixin chops(items)
+    .lists__body
+        .chops
+            .chops__header
+                each name in names
+                    .chops__name !{name}
+            .chops__body
+                .chops__items
+                    each item in items
+                        p.chops__name-bebida #{item.name}
+                .chops__prices
+                    each item in items
+                        p.chops__price #{item.priceuno}
+                        p.chops__price #{item.pricedos}
+                        p.chops__price #{item.pricetres}
+                        p.chops__price #{item.pricecuatro}

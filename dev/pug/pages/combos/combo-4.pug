@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Combo 4 - Skewered chicken + Guarana de 500 ml<br>Bs 89"
+    - descripcion = ""
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +plate('media/combos/COMBO_4.jpg',page,'','',descripcion,sponsors[1])
+    include ../../blocks/btn_atras
+    +btn("combos")

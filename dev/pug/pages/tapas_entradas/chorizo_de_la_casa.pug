@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Chorizo de la Casa"
+    - descripcion = "2 chorizos de la Casa servidos con chimichurri y pan tostado con ajo."
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +plate('media/tapas_entradas/CHORIZO_DE_LA_CASA.jpg',page,'Bs 35','',descripcion,sponsors[4])
+    include ../../blocks/btn_atras
+    +btn("tapas_entradas")

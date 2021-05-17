@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Jack Daniel's Steak"
+    - descripcion = "Un filete (lomito) de primera flambeado con whisky Jack Daniel’s y servido con salsa Jack Daniel’s picante."
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +platedos('media/plato_principal/JACK_DANIELS_STEAK.jpg',page,'(300 g) Bs 114','(600 g) Bs 184',descripcion,sponsors[1])
+    include ../../blocks/btn_atras
+    +btn("plato_principal")

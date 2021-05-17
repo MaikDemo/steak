@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "The Eggsplosion"
+    - descripcion = "Empezamos la “Eggsplosion” de sabores: hamburguesa con huevo frito, queso, tocino, tomate, lechuga, cebolla, pepinillos y salsa  curry whiskey."
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +plate('media/hamburguesas/EGGSPLOSION_BURGER.jpg',page,'(160 g) Bs 68','(250 g) Bs 86',descripcion,sponsors[3])
+    include ../../blocks/btn_atras
+    +btn("hamburguesas")

@@ -1,0 +1,28 @@
+extends ../templates/template-dishes
+include ../mixins/dishes
+//- cambiar la varible | PAGE | para que se cambie el titulo de la pagina
+block append config
+    - page = "Bebidas"
+block content
+    .container
+        .lists
+            include ../config/bebidas
+            include ../mixins/list
+            +header(sinalcohol.name)
+            .lists__content
+                +body(sinalcohol.items)
+            +header(chops.name)
+            .lists__content
+                +chops(chops.items)
+            +header(cervezas.name)
+            .lists__content
+                +body(cervezas.items)
+            +header(vino.name)
+            .lists__content
+                +body(vino.items)
+            include ../mixins/sponsor
+            +sponsors(sponsors)
+            
+    
+                    
+                

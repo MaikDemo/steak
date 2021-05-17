@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Steak Tartar"
+    - descripcion = "Carne de res cruda, plato conocido en Europa."
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +platedos('media/plato_principal/STEAK_TARTAR.jpg',page,'Bs 86','',descripcion,sponsors[3])
+    include ../../blocks/btn_atras
+    +btn("plato_principal")

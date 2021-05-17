@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Blue Cheese - Stuffed Burger"
+    - descripcion = "Si te gusta el sabor del queso azul, prueba nuestra deliciosa hamburguesa rellena de queso azul, cubierta con salsa de queso azul. Si te gusta picante, puedes añadirle locotos."
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +plate('media/hamburguesas/BLUE_CHEESE_BURGER.jpg',page,'(160 g) Bs 72','(250 g) Bs 88',descripcion,sponsors[1])
+    include ../../blocks/btn_atras
+    +btn("hamburguesas")

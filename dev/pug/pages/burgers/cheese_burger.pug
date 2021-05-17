@@ -1,0 +1,13 @@
+extends ../../templates/template.pug
+include ../../mixins/plate
+block append config
+    //- cambiar la varialbe | PAGE | para modificar el titulo de la pagina
+    - page = "Cheese Burger"
+    - descripcion = "Hamburguesa con queso, tomate, cebolla, lechuga y mayonesa auténticamente elaborada."
+block content
+    .content__plate
+        //- ingresar los datos para que se vea en la pagina en el siguiente orden
+        //- imgajen | titulo | precio | ingredientes
+        +plate('media/hamburguesas/CHEESE_BURGER.jpg',page,'(160 g) Bs 62','(250 g) Bs 78',descripcion,sponsors[2])
+    include ../../blocks/btn_atras
+    +btn("hamburguesas")
